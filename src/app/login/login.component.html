@@ -1,0 +1,20 @@
+<div class="container-fluid background">
+  <div class="w-100 logcard d-flex justify-content-center align-items-center">
+           <div class="col-md-4 my-3">
+            <div class="card backgroundcard h-100">
+              <div class="card-body">
+                <h1 class="card-title text-center py-5">LOG IN</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <input type="text" class="form-control mb-3" placeholder="Username"         formControlName="username"    aria-label="Username">
+                <input type="password" class="form-control mb-3"         formControlName="password"    placeholder="password" aria-label="password">
+                <div class="row d-flex justify-content-center">
+                  <button class="butn btn" type="submit">Submit</button>
+                </div>
+
+                </form>
+                
+              </div>
+            </div>  
+          </div>   
+  </div>
+</div>

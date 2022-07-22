@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light bg-light">
+    <form class="container-fluid">
+      <div class="input-group">
+        <span class="input-group-text" id="basic-addon1">{{pageTitle| uppercase }}</span>
+        <input type="text" [ngModelOptions]="{standalone: true}" [(ngModel)]="searchText"  class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+        <button  (click)="onSearch()" class="btn btn-success">Search</button>
+       <div style=" display: flex;align-items: center;justify-content: space-around;    height: 50px;" class="w-25">    
+        <h4 class="username">{{userName}}</h4>
+        <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="">
+                <img src="../assets/avatars/1.png" alt="" class=" rounded-circle img-fluid" style="width: 50px; ">
+            </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+            
+          <li>
+            <a class="dropdown-item" >
+              <i class="bx bx-power-off me-2"></i>
+              <span class="align-middle" (click)="logout()">Log Out</span>
+            </a>
+          </li>
+        </ul>
+       </div>
+    </div>
+  </form  >
+   
+  </nav>

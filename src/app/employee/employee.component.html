@@ -1,0 +1,81 @@
+<div class="container">
+
+    <div class="py-5">
+      <div class="activeSection    d-flex  rounded p-3 justify-content-center m-auto" >
+        <!-- active users -->
+        <div class="activeCars px-3  text-center w-50">
+            <h3> Active Employees</h3>
+            <h1> {{ActiveEmpsCount.length}}</h1>
+        </div>
+        <div class="activeUsers px-3  text-center w-50">
+          <h3> All  Employees</h3>
+          <h1> {{allEmps.length}}</h1>
+        </div>
+      </div>
+
+
+      <!-- Form  -->
+<form  [formGroup]="addEmpForm"  (ngSubmit)="onSubmit()" class="bg-light my-5 p-5">
+<h4>Add New Employee</h4>
+<div class="row">
+<div class="col">
+<input type="text" class="form-control" placeholder="Full Name"         formControlName="fullname">
+</div>
+<div class="col">
+<input type="username" class="form-control" placeholder="UserName"         formControlName="username">
+</div>
+<div class="col">
+<input type="Password" class="form-control" placeholder=" Password"         formControlName="password">
+</div>
+</div>
+<div class="col-auto my-1 text-end pt-3">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+
+
+      <div class="cars-info-list py-5" >
+        <div class="row">
+          <!-- one car -->
+          <div class="col-md-4 my-3"  *ngFor="let emp of allEmps">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{emp.fullname}}  </h5>
+                <img
+                  class="img-fluid d-flex mx-auto rounded-circle "
+                  src="../assets/avatars/1.png"
+                  alt="Card image cap"
+                />
+                <p class="card-title text-center py-2">{{emp.email}}</p>
+
+                <div class="text-black text-center "> 
+
+                  <i class='bx bxs-circle text-success ' *ngIf="emp.isActive;else active_content"></i>
+                  <ng-template #active_content>
+                    <i class='bx bxs-circle text-danger'></i>
+                  </ng-template>
+                  <span class="py-2" *ngIf="emp.isActive;else other_content" >Active  |</span>
+                  <ng-template #other_content>Not Active  |</ng-template>
+  
+
+
+
+                  <!-- <i class='bx bxs-circle text-success ' ></i>
+                  <span class="py-2" >Active  |</span> -->
+                  <span class="px-2"> Admin</span>
+                </div>
+                <div class=" text-center  mt-3"> 
+                  <button [routerLink]="['/employeemodify', emp._id]" class="btn btn-primary">  More</button>
+                </div>
+              </div>
+            </div>  
+          </div> 
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+

@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="py-5">
+
+
+      <!-- Form  -->
+            <form [formGroup]="carForm"    (ngSubmit)="onSubmit()"  class="bg-light my-5 p-5 rounded">
+              
+              <h4>Modify Car</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-modify  py-5">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">C2345  </h5>
+                      <img
+                        class="img-fluid d-flex mx-auto rounded-circle w-25 "
+                        src="../assets/cars/vw1.png"
+                        alt="Card image cap"
+                      />
+                      <h3 class="card-title text-center py-2">Mustafa Ahmed</h3>
+
+                      <div class="text-black text-center "> 
+                        <i class='bx bxs-circle text-danger ' ></i>
+                        <span class="py-2" >Active  |</span>
+                        <span class="px-2"> Up To Date</span>
+                      </div>
+                      <div class=" text-center  mt-3"> 
+                        <button class="btn btn-danger">  Delete Car</button>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+               <div class="col-md-6">
+                <div class="form-group py-3">
+                  <label >Car Code</label>
+                  <input type="Text"  formControlName="code" class="form-control" id="exampleInputPassword1" placeholder="Car Code">
+                </div>
+                <div class="form-group py-3">
+                  <label >Car Password</label>
+                  <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <!-- <div class="form-group py-3">
+                  <label >Car Employee</label>
+                  <input type="Text" class="form-control" id="exampleInputPassword1" placeholder="Car Employee">
+                </div> -->
+                <div class="form-group py-3">
+                  <label >Car version</label>
+                  <input type="Text" formControlName="Version" class="form-control" id="exampleInputPassword1" placeholder="Car version">
+                </div>
+              <div class="col-auto my-1 text-center pt-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+               </div>
+              </div>
+            </form>
+
+
+ 
+    </div>
+
+
+
+  </div>

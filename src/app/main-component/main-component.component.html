@@ -1,0 +1,61 @@
+
+<section> 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 bg-light">
+          <div id="dashboardSidebar">
+            <!-- <div class="yourcart">
+                <a href="#"><img id="sidebarlogoImg" src="../assets/img/download (1).png"></a>
+                <a href="javascript:void(0)" class="closeSidebarbtn" onclick="closesidebar()"><i class="fa-solid fa-xmark"></i></a>
+            </div> -->
+            <div class="text-center py-3">
+                <a [routerLink]="['/Home']" style="text-decoration: none; color: red;font-weight: bolder ;font-size: 50px;">
+                  <span class=" text-center text-primary">Fota</span>
+                </a>
+    
+                <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                </a>
+              </div>
+            <div class="dashboardSidebarIcons">
+                <ul class="nav flex-column" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" [routerLink]="['/home']">
+                        <i class='menu-icon tf-icons bx bxs-home'></i><span>Home</span>
+                    </a>
+                    </li>
+                   
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" [routerLink]="['/cars']">
+                        <i class="menu-icon tf-icons bx bxs-car"></i><span>Cars</span>
+                    </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" [routerLink]="['/employee']">
+                        <i class='menu-icon tf-icons bx bx-user'></i><span>Employes</span>
+                    </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" [routerLink]="['/firmware']">
+                        <i class="menu-ico tf-icons bx bx-layer"></i><span>Firmware</span>
+                    </a>
+                    </li>
+                    <!-- <li class="nav-item" role="presentation">
+                      <a class="nav-link" href="index.html">
+                        <i class="menu-icon tf-icons bx bx-home-circle"></i><span>Log out</span>
+                    </a>
+                    </li> -->
+                </ul>
+            </div>
+            
+        </div>
+        
+        </div>
+        <div class="col-lg-10">
+            <app-navbar></app-navbar>
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </section>
+

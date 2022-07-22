@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(128, 128, 255),rgb(209, 203, 203),rgb(255, 228, 233));
+}
+
+.backgroundcard{
+    margin-top: 20%;
+    border-radius: 63px;
+    background-color:  rgb(241 236 236) !important ;
+}
+.butn{
+    background-color: white;
+    width: 100px;
+    border-radius: 17px;
+    margin-top: 10px;
+    color: rgb(81, 81, 153);
+
+}
+
+
+
+// sideBar
+#dashboardSidebar{
+    left: 0px;
+   color: #222;
+   font-size: 24px;
+   opacity: 1;
+   height: 100vh;
+//    overflow-y: scroll;
+   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+}
+.dashboardSidebarIcons{
+    margin-top: 30px;
+}
+.dashboardSidebarIcons .active{
+    color: var(--green);
+}
+.dashboardSidebarIcons a{
+    color: var(--gray);
+    padding-left: 15px;
+}
+.dashboardSidebarIcons a:hover{
+    color: #0a3526;
+    text-decoration: none;
+}
+.dashboardSidebarIcons span{
+    margin: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.dashboardSidebarIcons svg{
+    width: 1.25rem;
+    height: 1.25rem;
+}.dashboardSidebarIcons li{
+    margin-top: 15px;
+}
+.dashboardSidebarIcons .categorySubMenu{
+    margin-top: 20px;
+    margin-left: 40px;
+    line-height: 1.3;
+    font-size: var(--paraSSize);
+    font-weight: 500;
+    color: var(--gray);
+}
+.sidebarOpenBtn button{
+    background-color: transparent;
+    color: var(--green);
+    margin-left: 25%;
+
+}
+.closeSidebarbtn{
+    display: none;
+}
+.closeSidebarbtn i{
+    float: right;
+    margin-top: 5px;
+    font-size: 19px;
+    color: var(--green);
+}
+
+@media (max-width : 768px){
+    #dashboardSidebar{display: none;}
+    .dashboardContentDiv{
+        padding-left: 130px;
+        margin-top: 30px;
+    }
+    .DropCSV label {margin-left: 0px;}
+}
+@media (max-width : 1024px){
+    #dashboardSidebar{right: 800px;}
+}
+@media (max-width : 768px){
+    .sidebarOpenBtn{
+        display: block;
+        padding: 25px;
+    }
+    .closeSidebarbtn{
+        display: contents;
+    }
+}

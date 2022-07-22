@@ -1,0 +1,67 @@
+<div class="row"> 
+    <div class="col-md-9">
+      <div class="py-5">
+        <div class="activeSection bg-light  w-50  d-flex  rounded p-3 justify-content-center m-auto" >
+          <!-- active users -->
+          <div class="activeCars px-3  text-center ">
+              <h3> Active Cars</h3>
+              <h1> {{ActiveCars.length}}</h1>
+          </div>
+          <div class="activeUsers px-3  text-center">
+            <h3> Active Users</h3>
+            <h1> {{ActiveUsers.length}}</h1>
+          </div>
+        </div>
+        <div class="cars-info-list py-5" >
+          <div class="row">
+            <div class="col-md-4 my-3" *ngFor="let car of homeCars">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{car.code}}  </h5>
+                  <img
+                    class="img-fluid d-flex mx-auto rounded "
+                    src="../assets/cars/vw1.png"
+                    alt="Card image cap"
+                  />
+                  <h3 class="card-title text-center py-2">{{car.admin?.fullname}} </h3>
+    
+                  <div class="text-black text-center "> 
+                    <i class='bx bxs-circle text-success ' *ngIf="car.isActive;else active_content"></i>
+                    <ng-template #active_content>
+                      <i class='bx bxs-circle text-danger'></i>
+                    </ng-template>
+                    <span class="py-2" *ngIf="car.isActive;else other_content" >Active  |</span>
+                    <ng-template #other_content>Not Active  |</ng-template>
+    
+                    <span class="px-2"> Up To Date</span>
+                  </div>
+                  <div class=" text-center  mt-3"> 
+                    <button [routerLink]="['/carmodify', car._id]" class="btn btn-primary">  More</button>
+                  </div>
+                </div>
+              </div>  
+            </div> 
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"> 
+      <div class="card mt-5 bg-light rounded">
+        <div class="card-body">
+          <h5 class="card-title text-center h1">Employees </h5>
+         <div class="oneEmp d-flex align-items-baseline py-2" *ngFor="let emp of homeUsers">  
+          <i class='bx bxs-circle text-success ' *ngIf="emp.isActive;else active_content"></i>
+          <ng-template #active_content>
+            <i class='bx bxs-circle text-danger'></i>
+          </ng-template>
+                    <h5 class="card-title text-center ">{{emp.fullname}}</h5>
+         </div>
+         <!-- <div class="oneEmp d-flex align-items-baseline">  
+          <i class='bx bxs-circle text-success mx-2 ' ></i>
+          <h5 class="card-title text-center py-2">Ahmed Mustafa </h5>
+         </div> -->
+        </div>
+      </div>  
+    </div>
+  </div>
